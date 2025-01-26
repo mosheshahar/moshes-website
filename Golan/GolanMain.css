@@ -1,5 +1,5 @@
 main {
-    width: 100%;
+    width: 100uv;
 }
 
 .image {
@@ -9,7 +9,7 @@ main {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    width: 60%;
+    width: 100uv;
 }
 
 .top-link {
@@ -26,7 +26,7 @@ main {
     line-height: 34px;
     background-color: aquamarine;
     text-align: center;
-    width: 60%;
+    width: 100uv;
 }
 
 .header-secondary{
