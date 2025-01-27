@@ -74,14 +74,14 @@
     </ol>
 -->
     </Form>
-    <form>
+    <Form>
         <h3 class="answers-form">מה מספר התושבים המוערך</h3>
         <input type="radio" name="population1" value="282,200">282,200
         <input type="radio" name="population1" value="198,600">198,600
         <input type="radio" name="population1" value="281,800">281,800
         <input type="radio" name="population1" value="284,700">284,700
         <button type="button" onclick="displayRadioValue()">Submit</button>
-    </form>
+    </Form>
     <br>
     <p id="results">תוצאות החידון</p>
     <br>
@@ -94,9 +94,9 @@
     <script>
         function testResults() {
             document.getElementById("results").innerHTML = "הצלחה";
-            loanAmountValue = document.getElementById("loan-amount").value;
-            document.getElementById("results").innerHTML = `Loan Amount: ${loanAmountValue}`;
-            populationValue = document.getElementById("choice4").value;
+            var loanAmountValue = document.getElementById("loan-amount").value;
+            var document.getElementById("results").innerHTML = `Loan Amount: ${loanAmountValue}`;
+            var populationValue = document.getElementById("choice4").value;
             document.getElementById("results").innerHTML = `Population: ${populationValue}`;
         }
     </script>
