@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width" initial-scale="1.0">
+        <title>Haifa Presentation of Golan</title>
+        <link href="GolanMain.css" rel="stylesheet">
+
+    </head>
+    <body>
+        <h1 class="header-main">שאלות על חיפה</h1>
+    
+   
+<form action="Answers.html" dir="rtl" class="answers-form">
+    <h3 class="form-secondary">על ידי מי הוקמה חיפה</h3>
+  <input class="selection" type="radio" id="choice1" name="whofounded" value="choice1">
+  <label for="choice1">על ידי דאהר אל -עומר</label><br>
+  <input type="radio" id="choice2" name="whofounded" value="choice2">
+  <label for="choice2">על ידי עלמה דה-ויונסה</label><br>
+  <input type="radio" id="choice3" name="whofounded" value="choice3">
+  <label for="choice3">על ידי אלברט אינשטיין</label><br>
+  <input type="radio" id="choice4" name="whofounded" value="choice4">
+  <label for="choice4">על ידי הקמת ערים בע''מ</label>
+
+  <br>  
+  <h3 class="answers-form">איפה חיפה בארץ</h3>
+  <input type="radio" id="choice1" name="location" value="choice1">
+  <label for="choice1">במזרח</label><br>
+  <input type="radio" id="choice2" name="location" value="choice2">
+  <label for="choice2">במערב</label><br>  
+  <input type="radio" id="choice3" name="location" value="choice3">
+  <label for="choice3">בצפון</label><br>
+  <input type="radio" id="choice4" name="location" value="choice4">
+  <label for="choice4">בדרום</label><br><br>
+
+  <br>  
+  <h3 class="answers-form">מתי הוכרזה חיפה כעיר</h3>
+  <input type="radio" id="choice1" name="yearofdeclaration" value="choice1">
+  <label for="choice1">בשנת 1973</label><br>
+  <input type="radio" id="choice2" name="yearofdeclaration" value="choice2">
+  <label for="choice2">בשנת 1761</label><br>  
+  <input type="radio" id="choice3" name="yearofdeclaration" value="choice3">
+  <label for="choice3">בשנת 2020</label><br>
+  <input type="radio" id="choice4" name="yearofdeclaration" value="choice4">
+  <label for="choice4">בשנת 1834</label><br><br>
+   
+  <br>  
+  <h3 class="answers-form">מה מספר התושבים המוערך</h3>
+  <input type="radio" id="choice1" name="population" value="choice1">
+  <label for="choice1">282,200</label><br>
+  <input type="radio" id="choice2" name="population" value="choice2">
+  <label for="choice2">198,600</label><br>  
+  <input type="radio" id="choice3" name="population" value="choice3">
+  <label for="choice3">281,800</label><br>
+  <input type="radio" id="choice4" name="population" value="choice4">
+  <label for="choice4">284,700</label><br><br>
+<!--  <input type="submit" value="Submit"> -->
+</form>
+<!--
+    <h3 class="header-secondary">מתי הוכרזה חיפה כעיר</h3>
+    <ol>
+        <li dir="rtl">
+            בשנת 1973 
+        </li>
+        <li dir="rtl">
+            בשנת 1761
+        </li>
+        <li dir="rtl">
+            בשנת 2020
+        </li>
+        <li dir="rtl">
+            בשנת 1834
+        </li>
+    </ol>
+-->
+    </Form>
+    <br>
+    <p id="results">תוצאות החידון</p>
+    <br>
+    <button onclick="setResults()">הראה תוצאות של החידון</button>
+    <br><br>
+    <a href="GolanHaifa.html">
+        <button>חזרה למסך הפתיחה</button>
+    </a>
+
+    <script>
+        function setResults() {
+            document.getElementById("results").innerHTML = "הצלחה";
+        }
+    </script>
+    </body>
+ </html>

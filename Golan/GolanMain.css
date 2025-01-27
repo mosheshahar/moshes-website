@@ -7,7 +7,7 @@ main {
     height: 700px;
     background-image: url(Haifa2.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 50%;
     background-position: center;
     width: 100uv;
 }
@@ -50,3 +50,35 @@ ul, ol {
     padding-inline: 20px;
     height: fit-content;
 }
+
+.answers-form {
+    text-align: center;
+    width: auto;
+}
+
+.ul-list {
+    text-align: right;
+    font-size: larger;
+
+    padding-inline: 20px;
+
+    height: fit-content;
+}
+
+button {
+    size: 140px;
+    font-size: 18px;
+    background-color: aquamarine;
+    width: 200px;
+    border-radius: 10px;
+    justify-content: center;
+}
+/*
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+}
+    */
