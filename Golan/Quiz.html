@@ -10,7 +10,10 @@
     <body>
         <h1 class="header-main">שאלות על חיפה</h1>
     
-   
+    <p>Loan Amount $
+        <input onchange="testResults()" class="input" type="number" id="loan-amount" min="1" max="500000" value="10000">
+    </p>
+    
 <form action="Answers.html" dir="rtl" class="answers-form">
     <h3 class="form-secondary">על ידי מי הוקמה חיפה</h3>
   <input class="selection" type="radio" id="choice1" name="whofounded" value="choice1">
@@ -22,7 +25,6 @@
   <input type="radio" id="choice4" name="whofounded" value="choice4">
   <label for="choice4">על ידי הקמת ערים בע''מ</label>
 
-  <br>  
   <h3 class="answers-form">איפה חיפה בארץ</h3>
   <input type="radio" id="choice1" name="location" value="choice1">
   <label for="choice1">במזרח</label><br>
@@ -31,9 +33,8 @@
   <input type="radio" id="choice3" name="location" value="choice3">
   <label for="choice3">בצפון</label><br>
   <input type="radio" id="choice4" name="location" value="choice4">
-  <label for="choice4">בדרום</label><br><br>
+  <label for="choice4">בדרום</label>
 
-  <br>  
   <h3 class="answers-form">מתי הוכרזה חיפה כעיר</h3>
   <input type="radio" id="choice1" name="yearofdeclaration" value="choice1">
   <label for="choice1">בשנת 1973</label><br>
@@ -42,9 +43,8 @@
   <input type="radio" id="choice3" name="yearofdeclaration" value="choice3">
   <label for="choice3">בשנת 2020</label><br>
   <input type="radio" id="choice4" name="yearofdeclaration" value="choice4">
-  <label for="choice4">בשנת 1834</label><br><br>
+  <label for="choice4">בשנת 1834</label>
    
-  <br>  
   <h3 class="answers-form">מה מספר התושבים המוערך</h3>
   <input type="radio" id="choice1" name="population" value="choice1">
   <label for="choice1">282,200</label><br>
@@ -52,7 +52,7 @@
   <label for="choice2">198,600</label><br>  
   <input type="radio" id="choice3" name="population" value="choice3">
   <label for="choice3">281,800</label><br>
-  <input type="radio" id="choice4" name="population" value="choice4">
+  <input type="radio" id="choice4" name="population" value="284,700">
   <label for="choice4">284,700</label><br><br>
   <input type="submit" value="Submit">
 </form>
@@ -74,18 +74,54 @@
     </ol>
 -->
     </Form>
+    <form>
+        <h3 class="answers-form">מה מספר התושבים המוערך</h3>
+        <input type="radio" name="population1" value="282,200">282,200
+        <input type="radio" name="population1" value="198,600">198,600
+        <input type="radio" name="population1" value="281,800">281,800
+        <input type="radio" name="population1" value="284,700">284,700
+        <button type="button" onclick="displayRadioValue()">Submit</button>
+    </form>
     <br>
     <p id="results">תוצאות החידון</p>
     <br>
-    <button onclick="setResults()">הראה תוצאות של החידון</button>
+    <button onclick="displayRadioValue()">הראה תוצאות של החידון</button>
     <br><br>
     <a href="GolanHaifa.html">
         <button>חזרה למסך הפתיחה</button>
     </a>
 
     <script>
-        function setResults() {
+        function testResults() {
             document.getElementById("results").innerHTML = "הצלחה";
+            loanAmountValue = document.getElementById("loan-amount").value;
+            document.getElementById("results").innerHTML = `Loan Amount: ${loanAmountValue}`;
+            populationValue = document.getElementById("choice4").value;
+            document.getElementById("results").innerHTML = `Population: ${populationValue}`;
+        }
+    </script>
+    <script>
+    function checkResults() {
+    <!--
+        whofoundedValue = document.getElementById("whofounded").value;
+        locationRateValue = document.getElementById("location").value;
+        yearofdeclarationValue = document.getElementById("yearofdeclaration").value;
+        populationValue = document.getElementById("population").value;
+    -->    
+    loanAmountValue = document.getElementById("loan-amount").value;
+    document.getElementById("results").innerHTML = `Loan Amount: ${loanAmountValue}`;
+}
+</script>
+<div id="result1"></div>
+<script>
+    function displayRadioValue() {
+            var ele = document.getElementsByName('population1');
+ 
+            for (i = 0; i < ele.length; i++) {
+                if (ele[i].checked)
+                    document.getElementById("result1").innerHTML
+                        = "population: " + ele[i].value;
+            }
         }
     </script>
     </body>
