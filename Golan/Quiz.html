@@ -10,118 +10,96 @@
     <body>
         <h1 class="header-main">שאלות על חיפה</h1>
     
-    <p>Loan Amount $
-        <input onchange="testResults()" class="input" type="number" id="loan-amount" min="1" max="500000" value="10000">
-    </p>
-    
-<form action="Answers.html" dir="rtl" class="answers-form">
-    <h3 class="form-secondary">על ידי מי הוקמה חיפה</h3>
-  <input class="selection" type="radio" id="choice1" name="whofounded" value="choice1">
-  <label for="choice1">על ידי דאהר אל -עומר</label><br>
-  <input type="radio" id="choice2" name="whofounded" value="choice2">
-  <label for="choice2">על ידי עלמה דה-ויונסה</label><br>
-  <input type="radio" id="choice3" name="whofounded" value="choice3">
-  <label for="choice3">על ידי אלברט אינשטיין</label><br>
-  <input type="radio" id="choice4" name="whofounded" value="choice4">
-  <label for="choice4">על ידי הקמת ערים בע''מ</label>
+    <form dir="rtl" class="answers-form">
+        <h3 class="form-secondary">על ידי מי הוקמה חיפה</h3>
+        <input type="radio" name="whofounded" value="על ידי דאהר אל -עומר">על ידי דאהר אל -עומר<br>
+        <input type="radio" name="whofounded" value="על ידי עלמה דה-ויונסה">על ידי עלמה דה-ויונסה<br>
+        <input type="radio" name="whofounded" value="על ידי אלברט אינשטיין">על ידי אלברט אינשטיין<br>
+        <input type="radio" name="whofounded" value="על ידי הקמת ערים בע''מ">על ידי הקמת ערים בע''מ<br>
+        <br>
 
-  <h3 class="answers-form">איפה חיפה בארץ</h3>
-  <input type="radio" id="choice1" name="location" value="choice1">
-  <label for="choice1">במזרח</label><br>
-  <input type="radio" id="choice2" name="location" value="choice2">
-  <label for="choice2">במערב</label><br>  
-  <input type="radio" id="choice3" name="location" value="choice3">
-  <label for="choice3">בצפון</label><br>
-  <input type="radio" id="choice4" name="location" value="choice4">
-  <label for="choice4">בדרום</label>
+        <h3 class="answers-form">איפה חיפה בארץ</h3>
+        <input type="radio" name="location" value="במזרח">במזרח<br>
+        <input type="radio" name="location" value="במערב">במערב<br>
+        <input type="radio" name="location" value="בצפון">בצפון<br>
+        <input type="radio" name="location" value="בדרום">בדרום<br>
+        <br>
 
-  <h3 class="answers-form">מתי הוכרזה חיפה כעיר</h3>
-  <input type="radio" id="choice1" name="yearofdeclaration" value="choice1">
-  <label for="choice1">בשנת 1973</label><br>
-  <input type="radio" id="choice2" name="yearofdeclaration" value="choice2">
-  <label for="choice2">בשנת 1761</label><br>  
-  <input type="radio" id="choice3" name="yearofdeclaration" value="choice3">
-  <label for="choice3">בשנת 2020</label><br>
-  <input type="radio" id="choice4" name="yearofdeclaration" value="choice4">
-  <label for="choice4">בשנת 1834</label>
-   
-  <h3 class="answers-form">מה מספר התושבים המוערך</h3>
-  <input type="radio" id="choice1" name="population" value="choice1">
-  <label for="choice1">282,200</label><br>
-  <input type="radio" id="choice2" name="population" value="choice2">
-  <label for="choice2">198,600</label><br>  
-  <input type="radio" id="choice3" name="population" value="choice3">
-  <label for="choice3">281,800</label><br>
-  <input type="radio" id="choice4" name="population" value="284,700">
-  <label for="choice4">284,700</label><br><br>
-  <input type="submit" value="Submit">
-</form>
-<!--
-    <h3 class="header-secondary">מתי הוכרזה חיפה כעיר</h3>
-    <ol>
-        <li dir="rtl">
-            בשנת 1973 
-        </li>
-        <li dir="rtl">
-            בשנת 1761
-        </li>
-        <li dir="rtl">
-            בשנת 2020
-        </li>
-        <li dir="rtl">
-            בשנת 1834
-        </li>
-    </ol>
--->
-    </Form>
-    <Form>
+        <h3 class="answers-form">מתי הוכרזה חיפה כעיר</h3>
+        <input type="radio" name="yearofdeclaration" value="בשנת 1973">בשנת 1973<br>
+        <input type="radio" name="yearofdeclaration" value="בשנת 1761">בשנת 1761<br>
+        <input type="radio" name="yearofdeclaration" value="בשנת 2020">בשנת 2020<br>
+        <input type="radio" name="yearofdeclaration" value="בשנת 1834">בשנת 1834<br>
+        <br>
+
         <h3 class="answers-form">מה מספר התושבים המוערך</h3>
-        <input type="radio" name="population1" value="282,200">282,200
-        <input type="radio" name="population1" value="198,600">198,600
-        <input type="radio" name="population1" value="281,800">281,800
-        <input type="radio" name="population1" value="284,700">284,700
-        <button type="button" onclick="displayRadioValue()">Submit</button>
-    </Form>
+        <input type="radio" name="population" value="282,200">282,200<br>
+        <input type="radio" name="population" value="198,600">198,600<br>
+        <input type="radio" name="population" value="281,800">281,800<br>
+        <input type="radio" name="population" value="284,700">284,700<br>
+        <br>
+        <button type="button" onclick="displayQuizResults()">בדוק והצג תוצאות</button>
+    </form>
     <br>
-    <p id="results">תוצאות החידון</p>
+    <div id="result" class="result-class"></div>
     <br>
-    <button onclick="displayRadioValue()">הראה תוצאות של החידון</button>
-    <br><br>
+    <br>
+    <div id="resultsummary" class="result-class"></div>
+    <br>
     <a href="GolanHaifa.html">
         <button>חזרה למסך הפתיחה</button>
     </a>
 
     <script>
-        function testResults() {
-            document.getElementById("results").innerHTML = "הצלחה";
-            var loanAmountValue = document.getElementById("loan-amount").value;
-            var document.getElementById("results").innerHTML = `Loan Amount: ${loanAmountValue}`;
-            var populationValue = document.getElementById("choice4").value;
-            document.getElementById("results").innerHTML = `Population: ${populationValue}`;
-        }
-    </script>
-    <script>
-    function checkResults() {
-    <!--
-        whofoundedValue = document.getElementById("whofounded").value;
-        locationRateValue = document.getElementById("location").value;
-        yearofdeclarationValue = document.getElementById("yearofdeclaration").value;
-        populationValue = document.getElementById("population").value;
-    -->    
-    loanAmountValue = document.getElementById("loan-amount").value;
-    document.getElementById("results").innerHTML = `Loan Amount: ${loanAmountValue}`;
-}
-</script>
-<div id="result1"></div>
-<script>
-    function displayRadioValue() {
-            var ele = document.getElementsByName('population1');
- 
+    function displayQuizResults() {
+            const correctwhofounded = "על ידי דאהר אל -עומר";
+            const correctlocation = "בצפון";
+            const correctyearofdeclaration = "בשנת 1761";
+            const correctpopulation = "281,800";
+            const correctwhofoundedindex = 0;
+            const correctlocationindex = 2;
+            const correctyearofdeclarationindex = 1;
+            const correctpopulationindex = 2;
+            var message = "";
+            var correctanswers = 0;
+            var ele = document.getElementsByName('whofounded');
             for (i = 0; i < ele.length; i++) {
                 if (ele[i].checked)
-                    document.getElementById("result1").innerHTML
-                        = "population: " + ele[i].value;
+                {
+                   message = message + " Founded: " + ele[i].value;
+                   if (i == correctwhofoundedindex)
+                    correctanswers = correctanswers + 1;
+                }
             }
+            ele = document.getElementsByName('location');
+            for (i = 0; i < ele.length; i++) {
+                if (ele[i].checked)
+                {
+                   message = message + " location: " + ele[i].value;
+                   if (i == correctlocationindex)
+                    correctanswers = correctanswers + 1;
+                }
+            }
+            ele = document.getElementsByName('yearofdeclaration');
+            for (i = 0; i < ele.length; i++) {
+                if (ele[i].checked)
+                {
+                   message = message + " year: " + ele[i].value;
+                   if (i == correctyearofdeclarationindex)
+                    correctanswers = correctanswers + 1;
+                }
+            }
+            ele = document.getElementsByName('population');
+            for (i = 0; i < ele.length; i++) {
+                if (ele[i].checked)
+                {
+                   message = message + " population: " + ele[i].value;
+                   if (i == correctpopulationindex)
+                    correctanswers = correctanswers + 1;
+                }
+            }
+            document.getElementById("result").innerHTML = message;
+            document.getElementById("resultsummary").innerHTML =  "תשובות נכונות: " + correctanswers;
         }
     </script>
     </body>
