@@ -12,6 +12,36 @@ main {
     width: 100uv;
 }
 
+.image-1 {
+    top: 0px;
+    height: 200px;
+    background-image: url(Haifa2.jpg);
+    background-repeat: no-repeat;
+    background-size: 20%;
+    background-position: left;
+    width: 100uv;
+}
+
+.image-2 {
+    top: 0px;
+    height: 200px;
+    background-image: url(Technion\ Hadar.png);
+    background-repeat: no-repeat;
+    background-size: 20%;
+    background-position: left;
+    width: 100uv;
+}
+
+.image-3 {
+    top: 0px;
+    height: 200px;
+    background-image: url(Dakar.png);
+    background-repeat: no-repeat;
+    background-size: 20%;
+    background-position: left;
+    width: 100uv;
+}
+
 .top-link {
     background-color: rgb(76, 154, 227);
     text-align: center;
@@ -59,9 +89,7 @@ ul, ol {
 .ul-list {
     text-align: right;
     font-size: larger;
-
     padding-inline: 20px;
-
     height: fit-content;
 }
 
@@ -72,6 +100,13 @@ button {
     width: 200px;
     border-radius: 10px;
     justify-content: center;
+}
+
+.result-class {
+    background-color: rgb(127, 193, 255);
+    width: auto;
+    text-align: center;
+    font-size: 20px;
 }
 /*
 body {
