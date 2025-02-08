@@ -115,9 +115,9 @@ button {
 }
 
 .wrapper-photos {
-    width: 100uv;
-    margin-left: 100px;
-    margin-right: 100px;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
     padding: 20px;
 }
 
