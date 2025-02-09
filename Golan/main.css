@@ -13,7 +13,7 @@ body {
 }
 
 main {
-    width: 100%;
+    width: 80%;
     background-color: ghostwhite;
 }
 
@@ -60,8 +60,8 @@ header {
 ul, ol {
     text-align: right;
     font-size: larger;
-    width: 55%;
-    padding-inline: 20px;
+    width: 100%;
+    padding-inline: 4rem;
     height: fit-content;
 }
 
@@ -72,7 +72,7 @@ ul, ol {
     background-repeat: no-repeat;
     background-size: 50%;
     background-position: center;
-    width: 100uv;
+    width: 100%;
 }
 
 .header-main{
@@ -146,7 +146,6 @@ button {
 
 .photos-galery__photo-img {
     width: 100%;
-    min-height: 400px;
     object-fit: cover;
     border-radius: 4px;
   }
