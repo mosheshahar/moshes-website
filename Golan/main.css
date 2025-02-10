@@ -126,10 +126,10 @@ img {
   
   /* || MEDIUM */
   @media screen and (min-width: 768px) {
-    nav {
+/*    nav {
       display: none;
     }
-  
+  */
     .card {
       width: min(100%, 325px);
     }
@@ -168,16 +168,7 @@ img {
       font-size: 1.5rem;
     }
   
-    nav {
-      display: none;
-    }
-  
-    main {
-      flex-flow: row nowrap;
-      justify-content: space-evenly;
-      align-items: stretch;
-    }
-  
+
     .card {
       /* Remove calc() - min() supports math! */
       width: min(33% - 0.25rem, 200px);
@@ -188,7 +179,7 @@ img {
       font-size: 1.25rem;
     }
   }
-  
+
 .image {
     top: 700px;
     height: 600px;
