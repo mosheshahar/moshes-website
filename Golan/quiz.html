@@ -3,14 +3,13 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width" initial-scale="1.0">
-        <title>Haifa Presentation of Golan</title>
+        <title>חידון על חיפה</title>
         <link href="main.css" rel="stylesheet">
 
     </head>
     <body>
         <main>
             <header>
-                <BR><BR>
                 <nav class="nav">
                     <ul>
                         <li><a href="help.html" dir="rtl">עזרה</a></li>
@@ -19,47 +18,45 @@
                     </ul>
                 </nav>
             </header>
+
             <BR><BR>
-            <div class="wrapper">
-                <h1 class="header-main">שאלות על חיפה</h1>
-                <BR>
-                <form dir="rtl" class="answers-form">
-                    <h3 class="form-secondary">על ידי מי הוקמה חיפה</h3>
-                    <input type="radio" name="whofounded" value="על ידי דאהר אל -עומר">על ידי דאהר אל -עומר<br>
-                    <input type="radio" name="whofounded" value="על ידי עלמה דה-ויונסה">על ידי עלמה דה-ויונסה<br>
-                    <input type="radio" name="whofounded" value="על ידי אלברט אינשטיין">על ידי אלברט אינשטיין<br>
-                    <input type="radio" name="whofounded" value="על ידי הקמת ערים בע''מ">על ידי הקמת ערים בע''מ<br>
-                    <br>
+            <h1 class="header-main">חידון על חיפה</h1>
+            <BR>
+            <form dir="rtl" class="answers-form">
+                <h3 class="form-secondary">על ידי מי הוקמה חיפה</h3>
+                <input type="radio" name="whofounded" value="על ידי דאהר אל -עומר">על ידי דאהר אל -עומר<br>
+                <input type="radio" name="whofounded" value="על ידי עלמה דה-ויונסה">על ידי עלמה דה-ויונסה<br>
+                <input type="radio" name="whofounded" value="על ידי אלברט אינשטיין">על ידי אלברט אינשטיין<br>
+                <input type="radio" name="whofounded" value="על ידי הקמת ערים בע''מ">על ידי הקמת ערים בע''מ<br>
+                <br>
 
-                    <h3 class="answers-form">איפה חיפה בארץ</h3>
-                    <input type="radio" name="location" value="במזרח">במזרח<br>
-                    <input type="radio" name="location" value="במערב">במערב<br>
-                    <input type="radio" name="location" value="בצפון">בצפון<br>
-                    <input type="radio" name="location" value="בדרום">בדרום<br>
-                    <br>
+                <h3 class="answers-form">איפה חיפה בארץ</h3>
+                <input type="radio" name="location" value="במזרח">במזרח<br>
+                <input type="radio" name="location" value="במערב">במערב<br>
+                <input type="radio" name="location" value="בצפון">בצפון<br>
+                <input type="radio" name="location" value="בדרום">בדרום<br>
+                <br>
 
-                    <h3 class="answers-form">מתי הוכרזה חיפה כעיר</h3>
-                    <input type="radio" name="yearofdeclaration" value="בשנת 1973">בשנת 1973<br>
-                    <input type="radio" name="yearofdeclaration" value="בשנת 1761">בשנת 1761<br>
-                    <input type="radio" name="yearofdeclaration" value="בשנת 2020">בשנת 2020<br>
-                    <input type="radio" name="yearofdeclaration" value="בשנת 1834">בשנת 1834<br>
-                    <br>
+                <h3 class="answers-form">מתי הוכרזה חיפה כעיר</h3>
+                <input type="radio" name="yearofdeclaration" value="בשנת 1973">בשנת 1973<br>
+                <input type="radio" name="yearofdeclaration" value="בשנת 1761">בשנת 1761<br>
+                <input type="radio" name="yearofdeclaration" value="בשנת 2020">בשנת 2020<br>
+                <input type="radio" name="yearofdeclaration" value="בשנת 1834">בשנת 1834<br>
+                <br>
 
-                    <h3 class="answers-form">מה מספר התושבים המוערך</h3>
-                    <input type="radio" name="population" value="283,200">283,200<br>
-                    <input type="radio" name="population" value="191,600">191,600<br>
-                    <input type="radio" name="population" value="280,800">280,800<br>
-                    <input type="radio" name="population" value="284,700">284,700<br>
-                    <br>
-                    <button type="button" onclick="displayQuizResults()">בדוק והצג תוצאות</button>
-                </form>
+                <h3 class="answers-form">מה מספר התושבים המוערך</h3>
+                <input type="radio" name="population" value="283,200">283,200<br>
+                <input type="radio" name="population" value="191,600">191,600<br>
+                <input type="radio" name="population" value="280,800">280,800<br>
+                <input type="radio" name="population" value="284,700">284,700<br>
                 <br>
-                <div id="result" class="result-class"></div>
-                <br>
-                <br>
-                <div id="resultsummary" class="result-class"></div>
-                <br>
-            </div>
+                <button type="button" onclick="displayQuizResults()">בדוק והצג תוצאות</button>
+                <BR><BR>
+                    <div id="result" class="result-class"></div>
+                    <br><br>
+                    <div id="resultsummary" class="result-class"></div>
+            </form>
+            <br>
         </main>
     <script>
         function displayQuizResults() {
