@@ -74,19 +74,15 @@ nav li a:hover, li a:focus {
     cursor: pointer;
 }
 
-ul, ol {
-    text-align: right;
-    font-size: larger;
-    width: 100%;
-    padding-inline: 4rem;
-    height: fit-content;
+input {
+    margin-left: 10px;
 }
 
 .cards {
   max-width: 800px;
   min-height: 400px;
   margin-inline: auto;
-  border: 1px solid #000;
+  border: 2px solid #000;
   display: flex;
   gap: 1rem;
   justify-content: center;
@@ -116,6 +112,7 @@ ul, ol {
   .card img {
     border: 5px double #333;
     border-radius: 50%;
+    min-height: 150px;
   }
   
   .card figcaption {
@@ -135,6 +132,7 @@ ul, ol {
   
     .card {
       width: min(100%, 400px);
+      min-height: 300px;
     }
 /*  
     .card:last-child {
@@ -206,7 +204,7 @@ ul, ol {
     height: 600px;
     background-image: url(Haifa2.jpg);
     background-repeat: no-repeat;
-    background-size: 50%;
+    background-size: 100%;
     background-position: center;
     width: 100%;
 }
@@ -223,15 +221,21 @@ ul, ol {
 
 p {
     text-align: right;
-    width: 60%;
+    width: 80%;
     font-size: 1.2rem;
 }
 
+ul, ol {
+  text-align: right;
+  font-size: larger;
+  width: 100%;
+  padding-inline: 4rem;
+  height: fit-content;
+}
+
 .answers-form {
-    text-align: center;
     width: auto;
     font-size: 1.2rem;
-    justify-self: center;
 }
 
 button {
@@ -248,4 +252,11 @@ button {
     text-align: center;
     font-size: 20px;
     justify-content: center;
+}
+
+article {
+  text-align: right;
+  width: auto;
+  font-size: 20px;
+  margin: 10px;
 }
