@@ -1,35 +1,115 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>My first website</title>
-        <link href="styles/styles.css" rel="stylesheet">
-    </head>
-<h1>Moshe Shahar's Web Site</h1>
-<h2>
-    משה שחר
-</h2>
-<button class="secondary-class" 
-    <a href = "https://www.youtube.com" target="_blank"> Go to Youtube </a>
-</button>
-<br>
-<div class="main-class">
-    <button > Goto Google </button>
-</div>
-    <a href = "https://www.youtube.com" target="_blank"> Go to Youtube </a>
-<p>
-     <div id="list">
-        <p><iframe src="searchlogfile.txt" frameborder="0" height="200"
-            width="95%"></iframe></p>
-      </div>
-</p>
-<button class="secondary-class" onclick="myFunction()">Click me</button>
+<html lang="en">
 
-<p id="demo"></p>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Moshe Shahar">
+    <meta name="description" content="The official website for The Little Taco Shop">
+    <title>מתכונים מהבית של סבתא</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+</head>
 
-<script>
-function myFunction() {
-  document.getElementById("demo").innerHTML = "Hello World";
-  document.getElementById('demo').innerHTML=Date()
-}
-</script>
+<body>
+    <header class="header">
+        <h1 class="header__h1">מתכונים מהבית של סבתא</h1>
+        <nav class="header__nav">
+            <ul class="header__ul">
+                <li>
+                    <a href="#menu">תפריט</a>
+                </li>
+                <li>
+                    <a href="hours.html">חיפוש</a>
+                </li>
+                <li>
+                    <a href="contact.html">קשר</a>
+                </li>
+                <li>
+                    <a href="about.html">אודות</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2 class="hero__h2">!ברוכים הבאים</h2>
+        <figure>
+            <img src="img/tacos_and_drink_1000x667.png" alt="Tacos and a Drink" title="We love tacos!" width="1000"
+                height="667">
+            <figcaption class="offscreen">
+                Tacos and a Drink
+            </figcaption>
+        </figure>
+    </section>
+
+    <main class="main">
+
+        <article id="menu" class="main__article menu">
+            <h2 class="menu__h2">התפריט שלנו</h2>
+            <table class="menu__container">
+                <caption class="offscreen">Our Tacos</caption>
+                <thead>
+                    <tr>
+                        <th class="menu__header" scope="col">Tacos</th>
+                        <th class="menu__header" scope="col">Quantity</th>
+                        <th class="menu__header" scope="col">Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th class="menu__item menu__cr" scope="row" rowspan="3">
+                            Crunchy
+                        </th>
+                        <td class="menu__item">1</td>
+                        <td class="menu__item">$1.50</td>
+                    </tr>
+                    <tr>
+                        <td class="menu__item">2</td>
+                        <td class="menu__item">$2.50</td>
+                    </tr>
+                    <tr>
+                        <td class="menu__item">3</td>
+                        <td class="menu__item">$3.25</td>
+                    </tr>
+                    <tr>
+                        <th class="menu__item menu__sf" scope="row" rowspan="3">
+                            Soft
+                        </th>
+                        <td class="menu__item">1</td>
+                        <td class="menu__item">$2.00</td>
+                    </tr>
+                    <tr>
+                        <td class="menu__item">2</td>
+                        <td class="menu__item">$3.50</td>
+                    </tr>
+                    <tr>
+                        <td class="menu__item">3</td>
+                        <td class="menu__item">$4.50</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td class="menu__item menu__cs" colspan="3">
+                            Chips &amp; Salsa $2
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+
+            <p class="center">
+                <a href="#">חזרה למעלה</a>
+            </p>
+        </article>
+    </main>
+    <hr>
+    <footer class="footer">
+        <p>
+            <span class="nowrap">Copyright &copy; <time id="year"></time></span>
+            <span class="nowrap">מתכונים מהבית של סבתא</span>
+        </p>
+    </footer>
+</body>
+
 </html>
