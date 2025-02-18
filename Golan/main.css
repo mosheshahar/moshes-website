@@ -11,6 +11,103 @@ img {
   height: auto;
 }
 
+/* || VARIABLES */
+
+:root {
+  /* FONTS */
+  --FF: "Nunito", sans-serif;
+  --FF-HEADINGS: "Fugaz One", cursive;
+  --FS: clamp(1rem, 2.2vh, 1.5rem);
+
+  /* COLORS */
+  --BGCOLOR-FADE: rgb(252, 220, 160);
+  --BGCOLOR: orange;
+  --BGIMAGE: linear-gradient(to bottom, var(--BGCOLOR), var(--BGCOLOR-FADE));
+  --BODY-BGCOLOR: #FFF;
+  --BORDER-COLOR: #333;
+  --BUTTON-COLOR: #FFF;
+  --FONT-COLOR: #000;
+  --HEADER-BGCOLOR: #000;
+  --HEADER-COLOR: #FFF;
+  --HERO-BGCOLOR: rgba(51, 178, 51, 0.75);
+  --HERO-COLOR: #FFF;
+  --HIGHLIGHT-COLOR: rgb(51, 178, 51);
+  --LINK-ACTIVE: orange;
+  --LINK-COLOR: #000;
+  --LINK-HOVER: hsla(0, 0%, 0%, 0.6);
+  --NAV-BGCOLOR: #FFF;
+
+  /* BORDERS */
+  --BORDERS: 1px solid var(--BORDER-COLOR);
+  --BORDER-RADIUS: 15px;
+
+  /* STANDARD PADDING */
+  --PADDING-TB: 0.25em;
+  --PADDING-SIDE: 2.5%;
+
+  /* STANDARD MARGIN */
+  --MARGIN: clamp(1em, 2.5vh, 1.5em) 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+      --BGCOLOR-FADE: gray;
+      --BGCOLOR: #000;
+      --BODY-BGCOLOR: #333;
+      --BORDER-COLOR: whitesmoke;
+      --BUTTON-COLOR: #000;
+      --FONT-COLOR: whitesmoke;
+      --HEADER-COLOR: whitesmoke;
+      --HERO-COLOR: #333;
+      --HIGHLIGHT-COLOR: whitesmoke;
+      --LINK-ACTIVE: rgb(252, 200, 103);
+      --LINK-COLOR: whitesmoke;
+      --LINK-HOVER: orange;
+      --NAV-BGCOLOR: rgb(20, 20, 20);
+  }
+}
+
+/* || UTILITY CLASSES */
+.offscreen {
+  position: absolute;
+  left: -10000px;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.center {
+  text-align: center;
+}
+
+/* || HERO */
+
+.hero {
+  position: relative;
+}
+
+.hero__h2 {
+  background-color: var(--HERO-BGCOLOR);
+  color: var(--HERO-COLOR);
+  padding: 0.25em 0.5em;
+  text-shadow: 2px 2px 5px var(--BORDER-COLOR);
+  position: absolute;
+  top: -100px;
+  left: 20px;
+  animation: showWelcome 0.5s ease-in-out 1s forwards;
+}
+
+/* || GENERAL STYLES */
+
+html {
+  scroll-behavior: smooth;
+  font-size: var(--FS);
+/*  font-family: var(--FF);
+  background-color: var(--BGCOLOR);
+  background-image: var(--BGIMAGE);*/
+}
+
 /* GENERAL STYLES */
 body {
   background-color: #f7f7f7;
@@ -31,7 +128,7 @@ header {
 }
 
 main {
-/*  flex-grow: 1;*/
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
   width: 80%;
@@ -79,10 +176,10 @@ input {
 }
 
 .cards {
-  max-width: 800px;
+  width: 100%;
   min-height: 400px;
   margin-inline: auto;
-  border: 2px solid #000;
+  border: 2px solid #777;
   display: flex;
   gap: 1rem;
   justify-content: center;
@@ -94,7 +191,7 @@ input {
 
 .card {
     scroll-margin-top: 8rem;
-    width: min(100%, 350px);
+    width: 100%;
     background-color: #cbd5e1;
     border: 2px solid #000;
     border-radius: 15px;
@@ -107,18 +204,24 @@ input {
   .card figure {
     display: flex;
     flex-flow: column nowrap;
+    text-align: center;
   }
   
   .card img {
     border: 5px double #333;
     border-radius: 50%;
-    min-height: 150px;
+    height: 200px;
   }
   
   .card figcaption {
     font-weight: bolder;
     font-size: 2rem;
-    margin: 1rem;
+    margin: 0.5rem;
+    text-align: center;
+  }
+  .card p {
+    font-size: 1.2rem;
+    margin: 0.5rem;
     text-align: center;
   }
 
@@ -133,6 +236,12 @@ input {
     .card {
       width: min(100%, 400px);
       min-height: 300px;
+    }
+
+    .card p {
+      font-size: 1.2rem;
+      margin: 0.5rem;
+      text-align: center;
     }
 /*  
     .card:last-child {
@@ -159,7 +268,9 @@ input {
     }
 
     .card p {
-      margin-top: 1rem;
+      font-size: 1.2rem;
+      margin: 2px;
+      text-align: center;
     }
   }
   
@@ -178,7 +289,8 @@ input {
   @media screen and (min-width: 1200px) {
     .card {
       /* Remove calc() - min() supports math! */
-      width: min(calc(33% - 1rem), 500px);
+      /*width: min(calc(33% - 1rem), 500px);*/
+      width: min(100%, 400px);
     }
   }
   
@@ -222,7 +334,7 @@ input {
 p {
     text-align: right;
     width: 80%;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
 ul, ol {
@@ -255,8 +367,21 @@ button {
 }
 
 article {
-  text-align: right;
+  text-align: center;
   width: auto;
-  font-size: 20px;
+  font-size: 1.2rem;
   margin: 10px;
 }
+
+.article__p {
+  text-align: center;
+  width: 80%;
+  font-size: 1.5rem;
+}
+
+.card__p {
+  text-align: center;
+  width: 80%;
+  font-size: 1.5rem;
+}
+
