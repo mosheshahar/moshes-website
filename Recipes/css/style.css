@@ -123,6 +123,7 @@ h2,
 h3 {
     margin-bottom: 1em;
     color: var(--HIGHLIGHT-COLOR);
+    text-align: center;
 }
 
 p {
@@ -373,4 +374,9 @@ tfoot td {
     .menu__cs {
         font-size: 125%;
     }
+}
+
+.search__ul {
+    list-style-type: none;
+    text-align: center;
 }
