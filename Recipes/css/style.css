@@ -41,7 +41,7 @@ textarea {
     --HEADER-COLOR: #FFF;
     --HERO-BGCOLOR: rgba(51, 178, 51, 0.75);
     --HERO-COLOR: #FFF;
-    --HIGHLIGHT-COLOR: rgb(51, 178, 51);
+    --HIGHLIGHT-COLOR: rgb(74, 179, 221);
     --LINK-ACTIVE: orange;
     --LINK-COLOR: #000;
     --LINK-HOVER: hsla(0, 0%, 0%, 0.6);
@@ -216,7 +216,8 @@ a:active {
     color: var(--HEADER-COLOR);
     padding: var(--PADDING-TB) var(--PADDING-SIDE);
     text-align: center;
-}
+    opacity: 70%;
+ }
 
 /* || MAIN */
 
@@ -259,6 +260,8 @@ a:active {
 
 .contact__p {
     margin: 1em 0;
+    text-align: right;
+    direction: rtl;
 }
 
 .contact__label {
@@ -276,6 +279,7 @@ a:active {
 
 .contact__button {
     padding: 0.5em;
+    width: 200px;
     border-radius: var(--BORDER-RADIUS);
     background-color: var(--HIGHLIGHT-COLOR);
     color: var(--BUTTON-COLOR);
@@ -360,14 +364,6 @@ tfoot td {
 }
 
 @media screen and (min-width: 576px) {
-    .header__h1::before {
-        content: '🌮 '
-    }
-
-    .header__h1::after {
-        content: ' 🌮'
-    }
-
     .menu__header,
     .menu__cr,
     .menu__sf,
@@ -380,3 +376,4 @@ tfoot td {
     list-style-type: none;
     text-align: center;
 }
+
