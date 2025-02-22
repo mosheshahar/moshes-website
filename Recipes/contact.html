@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Moshe Shahar">
     <meta name="description" content="יצירת קשר">
-    <title>יצירת קשר</title>
+    <title>מתכונים מהבית של סבתא</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/main.js" defer></script>
@@ -14,14 +14,11 @@
 
 <body>
     <header class="header">
-        <h1 class="header__h1">יצירת קשר</h1>
+        <h1 class="header__h1">מתכונים מהבית של סבתא</h1>
         <nav class="header__nav">
             <ul class="header__ul">
                 <li>
                     <a href="/">בית</a>
-                </li>
-                <li>
-                    <a href="/#menu">תפריט</a>
                 </li>
                 <li>
                     <a href="search.html">חיפוש</a>
@@ -44,41 +41,32 @@
     </section>
 
     <main class="main">
-        <article class="main__article">
-            <h2>Our Location</h2>
-            <address>
-                555 Taco Temptation Lane, Suite T<br>
-                Kansas City, MO 55555-5555
-                <br><br>
-                Phone: <a href="tel:+5555555555">555-555-5555</a>
-            </address>
-        </article>
-        <hr>
+
         <article class="main__article contact">
-            <h2 class="contact__h2">Our Contact Form</h2>
+            <h2 class="contact__h2">יצירת קשר</h2>
 
             <form action="https://httpbin.org/get" method="get" class="contact__form">
                 <fieldset class="contact__fieldset">
-                    <legend class="offscreen">Send Us A Message</legend>
+                    <legend class="offscreen">שילחו הודעה</legend>
                     <p class="contact__p">
-                        <label class="contact__label" for="name">Name:</label>
-                        <input class="contact__input" type="text" name="name" id="name" placeholder="your name"
+                        <label class="contact__label" for="name">שם:</label>
+                        <input class="contact__input" type="text" name="name" id="name" placeholder="השם שלך"
                             required>
                     </p>
                     <p class="contact__p">
-                        <label class="contact__label" for="email">Email:</label>
-                        <input class="contact__input" type="email" name="email" id="email" placeholder="your email"
+                        <label class="contact__label" for="email">דואר אלקטרוני:</label>
+                        <input class="contact__input" type="email" name="email" id="email" placeholder="הדואר האלקטרוני שלך"
                             required>
                     </p>
                     <p class="contact__p">
-                        <label class="contact__label" for="message">Your Message:</label>
+                        <label class="contact__label" for="message">הודעה:</label>
                         <br>
-                        <textarea class="contact__textarea" name="message" id="message" cols="30" rows="10"
-                            placeholder="Type your message here"></textarea>
+                        <textarea class="contact__textarea" name="message" id="message" cols="30" rows="6"
+                            placeholder="ההודעה שלך"></textarea>
                     </p>
                 </fieldset>
-                <button class="contact__button" type="submit">Send</button>
-                <button class="contact__button" type="reset">Reset</button>
+                <button class="contact__button" type="submit">שלח</button>
+                <button class="contact__button" type="reset">אפס</button>
             </form>
         </article>
     </main>
