@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Moshe Shahar">
+    <meta name="description" content="יצירת קשר">
+    <title>מתכונים מהבית של סבתא</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="header__h1">מתכונים מהבית של סבתא</h1>
+        <nav class="header__nav">
+            <ul class="header__ul">
+                <li><a href="index.html">בית</a></li>
+                <li><a href="search.html">חיפוש</a></li>
+                <li><a href="about.html">אודות</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <figure>
+            <img src="img/tacos_close_up_1000x649.png" alt="Little Taco Shop Tacos" title="Tacos ready to eat!"
+                width="1000" height="649">
+            <figcaption class="offscreen">
+                Little Taco Shop Tacos
+            </figcaption>
+        </figure>
+    </section>
+
+    <main class="main">
+
+        <article class="main__article contact">
+            <h2 class="contact__h2">יצירת קשר</h2>
+
+            <form action="https://httpbin.org/get" method="get" class="contact__form">
+                <fieldset class="contact__fieldset">
+                    <legend class="offscreen">שילחו הודעה</legend>
+                    <p class="contact__p">
+                        <label class="contact__label" for="name">שם:</label>
+                        <input class="contact__input" type="text" name="name" id="name" placeholder="השם שלך"
+                            required>
+                    </p>
+                    <p class="contact__p">
+                        <label class="contact__label" for="email">דואר אלקטרוני:</label>
+                        <input class="contact__input" type="email" name="email" id="email" placeholder="הדואר האלקטרוני שלך"
+                            required>
+                    </p>
+                    <p class="contact__p">
+                        <label class="contact__label" id="message" for="message">הודעה:</label>
+                        <br>
+                        <textarea class="contact__textarea" name="message" id="message" cols="30" rows="6"
+                            placeholder="ההודעה שלך"></textarea>
+                    </p>
+                </fieldset>
+<!--                <button class="contact__button" type="submit">שלח</button>
+                <button class="contact__button" type="reset">אפס</button> -->
+            </form>
+        </article>
+
+        <input placeholder="abc" id="result" class="result-class" readonly>
+
+        <button type="button" onclick="sendEmail()">שלח</button>
+    </main>
+    <footer class="footer">
+        <p>
+            <span class="nowrap">Copyright &copy; <time id="year"></time></span>
+            <span class="nowrap">מתכונים מהבית של סבתא</span>
+        </p>
+    </footer>
+
+    <script>
+        function handleContactInfo() {
+            document.getElementById("result").innerHTML = "קיבלתי את הקריאה, תודה";
+
+        }
+    </script>
+
+<script type="text/javascript">
+    function sendEmail() {
+        Email.send({
+            Host: "smtp.gmail.com",
+            Username: "ms2812@gmail.com",
+            Password: "Enter your password",
+            To: 'ms2812@gmail.com',
+            From: "ms2812@gmail.com",
+            Subject: "Sending Email using javascript",
+            Body: "Well that was easy!!",
+        })
+            .then(function (message) {
+                alert("mail sent successfully")
+            });
+    }
+</script>
+
+</body>
+
+</html>

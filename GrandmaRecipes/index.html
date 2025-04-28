@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Moshe Shahar">
+    <meta name="description" content="The official website for The Little Taco Shop">
+    <title>מתכונים מהבית של סבתא</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+    <script src="js/recipes-data.js" defer></script>
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="header__h1">מתכונים מהבית של סבתא</h1>
+      <nav class="navbar">
+        <div class="subnav">
+          <button class="subnavbtn">חיפוש</button>
+          <div class="subnav-content">
+            <ul class="header__ul">
+                <li><a href="appetizers/appetizers.html">מנות ראשונות</a></li>
+                <li><a href="soups/soups.html">מרקים</a></li>
+                <li><a href="main-dishes/main-dishes.html">מנות עיקריות</a></li>
+                <li><a href="deserts/deserts.html">קינוחים</a></li>
+                <li><a href="Salads/salads.html">סלטים</a></li>
+                <li><a href="drinks/drinks.html">משקאות</a></li>
+            </ul>           
+          </div>
+        </div>
+        <a href="about.html">אודות</a>
+        <a href="contact.html">קשר</a>
+    </nav>
+    </header>
+<!--
+    <header class="header">
+        <h1 class="header__h1">מתכונים מהבית של סבתא</h1>
+        <nav class="header__nav">
+            <ul class="header__ul">
+                <li><a href="index.html">בית</a></li>
+                <li><a href="search.html">חיפוש</a></li>
+                <li><a href="contact.html">קשר</a></li>
+            </ul>
+        </nav>
+    </header>
+-->
+
+    <section class="hero">
+        <h2 class="hero__h2">!ברוכים הבאים</h2>
+        <figure>
+            <img src="img/ribs50.jpg" alt="צלעות" title="מאכלים מכל הסוגים" width="100%">
+            <figcaption class="offscreen">
+                צלעות
+            </figcaption>
+        </figure>
+    </section>
+
+    <main>
+        <br>
+        <p id="test">test 1</p>
+        <br>
+        <button type="button" onclick="updateTextElement()">עדכן מסך</button>
+        <br>
+        <button type="button" onclick="updateListElement(4)">עדכן רשימה</button>
+        <br>
+
+        <article>
+            <br>
+            <h2>חיפוש מתכונים</h2>
+            <p dir="rtl" style="padding-right: 10px;">
+                האתר נוצר כדי לרכז מתכונים מסגנונות שונים, כולל הוראות מפורטות, תמונות ואף סרטונים שמדגימים את אופן ההכנה ואת המראה של המוצר הסופי
+            </p>
+            <p dir="rtl" style="padding-right: 10px;">
+                הכוונה היא לקבל מתכונים ממקורות שונים ולשתף באתר
+            </p>
+            <p dir="rtl" style="padding-right: 10px;">
+                    למציאת מתכון יש לבחור חיפוש בתפריט העליון
+            </p>
+        </article>
+    </main>
+    <hr>
+    <footer class="footer">
+        <p>
+            <span class="nowrap">Copyright &copy; <time id="year"></time></span>
+            <span class="nowrap">מתכונים מהבית של סבתא</span>
+        </p>
+    </footer>
+
+</body>
+
+</html>
