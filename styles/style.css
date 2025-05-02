@@ -1,24 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Nunito&display=swap');
 
 /* || RESET */
-*,
-*::after,
-*::before {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-}
-
-input,
-button,
-textarea {
-    font: inherit;
 }
 
 /* || VARIABLES */
@@ -30,8 +16,8 @@ textarea {
     --FS: clamp(1rem, 2.2vh, 1.5rem);
 
     /* COLORS */
-    --BGCOLOR-FADE: rgb(252, 220, 160);
-    --BGCOLOR: orange;
+    --BGCOLOR-FADE: rgb(160, 211, 252);
+    --BGCOLOR: blue;
     --BGIMAGE: linear-gradient(to bottom, var(--BGCOLOR), var(--BGCOLOR-FADE));
     --BODY-BGCOLOR: #FFF;
     --BORDER-COLOR: #333;
@@ -41,7 +27,7 @@ textarea {
     --HEADER-COLOR: #FFF;
     --HERO-BGCOLOR: rgba(51, 178, 51, 0.75);
     --HERO-COLOR: #FFF;
-    --HIGHLIGHT-COLOR: rgb(51, 178, 51);
+    --HIGHLIGHT-COLOR: rgb(74, 179, 221);
     --LINK-ACTIVE: orange;
     --LINK-COLOR: #000;
     --LINK-HOVER: hsla(0, 0%, 0%, 0.6);
@@ -112,6 +98,12 @@ body {
     box-shadow: 0 0 10px var(--BORDER-COLOR);
 }
 
+.main-container {
+  margin: 0 auto;
+  max-width: 1000px;
+  width: 100%;
+}
+
 h1,
 h2,
 h3 {
@@ -132,6 +124,7 @@ p {
 
 a:any-link {
     color: var(--LINK-COLOR);
+    text-decoration: none;
 }
 
 a:hover,
@@ -163,6 +156,7 @@ a:active {
     border-bottom: var(--BORDERS);
     font-weight: bold;
     box-shadow: 0 6px 5px -5px var(--BORDER-COLOR);
+    list-style-type: none;
 }
 
 .header__ul {
@@ -171,6 +165,7 @@ a:active {
     display: flex;
     justify-content: space-evenly;
     gap: 1rem;
+    text-decoration: none;
 }
 
 /* || HERO */
@@ -216,9 +211,28 @@ a:active {
     color: var(--HEADER-COLOR);
     padding: var(--PADDING-TB) var(--PADDING-SIDE);
     text-align: center;
-}
+    opacity: 70%;
+ }
 
 /* || MAIN */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+input,
+button,
+textarea {
+    font: inherit;
+}
+
+button {
+    background-color: aqua;
+    width: 200px;
+    border-radius: 10px;
+    text-align: center;
+}
 
 .main {
     padding: var(--PADDING-TB) var(--PADDING-SIDE);
@@ -237,14 +251,11 @@ a:active {
     min-height: calc(100vh - 20rem);
 }
 
-/* || ABOUT */
-
-.about__trivia {
-    margin: var(--MARGIN);
-}
-
-.about__trivia-answer {
-    margin-top: 1em;
+.soup__search {
+/*    position: fixed;*/
+    display: block;
+    top: 20px;
+    
 }
 
 /* || CONTACT */
@@ -259,6 +270,8 @@ a:active {
 
 .contact__p {
     margin: 1em 0;
+    text-align: right;
+    direction: rtl;
 }
 
 .contact__label {
@@ -276,6 +289,7 @@ a:active {
 
 .contact__button {
     padding: 0.5em;
+    width: 200px;
     border-radius: var(--BORDER-RADIUS);
     background-color: var(--HIGHLIGHT-COLOR);
     color: var(--BUTTON-COLOR);
@@ -346,28 +360,7 @@ tr {
     place-content: right;
 }
 
-thead th:first-child {
-    border-top-left-radius: var(--BORDER-RADIUS);
-}
-
-thead th:last-child {
-    border-top-right-radius: var(--BORDER-RADIUS);
-}
-
-tfoot td {
-    border-bottom-left-radius: var(--BORDER-RADIUS);
-    border-bottom-right-radius: var(--BORDER-RADIUS);
-}
-
 @media screen and (min-width: 576px) {
-    .header__h1::before {
-        content: '🌮 '
-    }
-
-    .header__h1::after {
-        content: ' 🌮'
-    }
-
     .menu__header,
     .menu__cr,
     .menu__sf,
@@ -376,7 +369,261 @@ tfoot td {
     }
 }
 
-.search__ul {
-    list-style-type: none;
-    text-align: center;
+.cards {
+    width: 100%;
+    min-height: 400px;
+    margin-inline: auto;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    align-content: space-evenly;
+    margin-top: 2rem;
+  }
+  
+  .card {
+      scroll-margin-top: 8rem;
+      width: 100%;
+      background-color: #cbd5e1;
+      border: 2px solid #000;
+      border-radius: 15px;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .card figure {
+      display: flex;
+      flex-flow: column nowrap;
+      text-align: center;
+    }
+    
+    .card img {
+      border: 5px double #333;
+      border-radius: 20%;
+      height: 200px;
+    }
+    
+    .card figcaption {
+      font-weight: bolder;
+      font-size: 2rem;
+      margin: 0.5rem;
+      text-align: center;
+    }
+    .card p {
+      font-size: 1.2rem;
+      margin: 0.5rem;
+      text-align: center;
+    }
+ 
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  text-align: center;
 }
+
+/* Navigation links */
+.navbar a {
+  float: left;
+  font-size: 18px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* The subnavigation menu */
+.subnav {
+  float: left;
+  overflow: hidden;
+  width: 20%;
+}
+
+/* Subnav button */
+.subnav .subnavbtn {
+  font-size: 18px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+/* Add a red background color to navigation links on hover */
+.navbar a:hover, .subnav:hover .subnavbtn {
+  background-color: red;
+}
+
+/* Style the subnav content - positioned absolute */
+.subnav-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: red;
+  width: 100%;
+  z-index: 1;
+}
+
+/* Style the subnav links */
+.subnav-content a {
+  float: left;
+  color: white;
+  text-decoration: none;
+}
+
+/* Add a grey background color on hover */
+.subnav-content a:hover {
+  background-color: #eee;
+  color: black;
+}
+
+/* When you move the mouse over the subnav container, open the subnav content */
+.subnav:hover .subnav-content {
+  display: block;
+}
+
+.pagination {
+    display: inline-block;
+  }
+  
+  .pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+    margin: 0 4px;
+  }
+  
+  .pagination a.active {
+    background-color: #4CAF50;
+    color: white;
+    border: 1px solid #4CAF50;
+  }
+  
+  .pagination a:hover:not(.active) {background-color: #ddd;}
+
+li::marker {
+    color: rgb(40, 21, 206);
+}
+  
+  .show {
+    display: block;
+  }
+  
+  .container {
+    margin-top: 20px;
+    overflow: hidden;
+  }
+
+  /* Style the buttons */
+  .btn {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: #ddd;
+  }
+  
+  .btn.active {
+    background-color: #666;
+    color: white;
+  }
+
+  [role="tablist"] {
+    list-style: none;
+    margin: 0;
+    padding: 1rem;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+  }
+  
+  [aria-selected="true"] {
+    text-decoration-thickness: 0.25em;
+    text-underline-offset: 0.5em;
+    color: orangered;
+  }
+  
+  /* extra styling to make the tabs look better that wasn't in the video */
+  .tabs-container {
+    padding: 2.5rem;
+    border-radius: 0.5rem;
+    background: hsl(0 0% 50% / 0.1);
+  }
+  
+  :root {
+    /* either --dark-mode or --no-dark-mode */
+    --color-scheme: var(--dark-mode);
+  
+    --font-family: system-ui;
+  
+    --fs-300: clamp(0.94rem, calc(0.92rem + 0.08vw), 0.98rem);
+    --fs-400: clamp(1.13rem, calc(1.06rem + 0.33vw), 1.31rem);
+    --fs-500: clamp(1.35rem, calc(1.21rem + 0.69vw), 1.75rem);
+    --fs-600: clamp(1.62rem, calc(1.37rem + 1.24vw), 2.33rem);
+    --fs-700: clamp(1.94rem, calc(1.54rem + 2.03vw), 3.11rem);
+    --fs-800: clamp(2.33rem, calc(1.7rem + 3.15vw), 4.14rem);
+    --fs-900: clamp(2.8rem, calc(1.85rem + 4.74vw), 5.52rem);
+  
+    --clr-primary-300: hsl(219, 76%, 55%);
+    --clr-primary-400: hsl(219, 76%, 40%);
+    --clr-primary-500: hsl(219, 76%, 25%);
+    --clr-secondary-300: hsl(269, 75%, 55%);
+    --clr-secondary-400: hsl(269, 75%, 40%);
+    --clr-secondary-500: hsl(269, 75%, 25%);
+    --clr-accent-300: hsl(358, 72%, 65%);
+    --clr-accent-400: hsl(358, 72%, 50%);
+    --clr-accent-500: hsl(358, 72%, 35%);
+  
+    /* settings */
+    --no-dark-mode: light;
+    --dark-mode: dark light;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  html {
+    color-scheme: var(--color-scheme);
+  }
+
+  .wrapper {
+    width: min(50rem, 100% - 2rem);
+    margin-inline: auto;
+  }
+  
+  .site-title {
+    font-size: var(--fs-900);
+    line-height: 1.05;
+    text-transform: uppercase;
+  }
+  
+  .section-title {
+    font-size: var(--fs-800);
+    line-height: 1.1;
+  }
+  
+  .visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+
+  
