@@ -97,7 +97,13 @@ body {
     border-right: var(--BORDERS);
     box-shadow: 0 0 10px var(--BORDER-COLOR);
 }
-
+/*
+.main-container {
+  margin: 0 auto;
+  max-width: 1000px;
+  width: 90%;
+}
+*/
 h1,
 h2,
 h3 {
@@ -362,7 +368,6 @@ tr {
         font-size: 125%;
     }
 }
-
 
 .cards {
     width: 100%;
