@@ -17,9 +17,9 @@
     <div class="main-container">
         <header class="header">
             <h1 class="header__h1">מתכונים מהבית של סבתא</h1>
-            <nav class="navbar">
+<!--            <nav class="navbar">
                 <div class="subnav">
-                    <button class="subnavbtn">חיפוש</button>
+                    <button class="subnavbtn">חיפוש<i class="fa fa-caret-down"></i></button>
                     <div class="subnav-content">
                         <ul class="header__ul">
                             <li><a href="appetizers/appetizers.html">מנות ראשונות</a></li>
@@ -33,8 +33,36 @@
                 </div>
                 <a href="about.html">אודות</a>
                 <a href="contact.html">קשר</a>
-            </nav>
+            </nav> -->
         </header>
+    
+        <div class="topnav" id="myTopnav">
+            <div class="dropdown">
+              <button class="dropbtn">חיפוש<i class="fa fa-caret-down"></i></button>
+              <div class="dropdown-content">
+                <a href="appetizers/appetizers.html">מנות ראשונות</a>
+                <a href="soups/soups.html">מרקים</a>
+                <a href="main-dishes/main-dishes.html">מנות עיקריות</a>
+                <a href="deserts/deserts.html">קינוחים</a>
+                <a href="salads/salads.html">סלטים</a>
+                <a href="drinks/drinks.html">משקאות</a>
+              </div>
+            </div> 
+            <a href="contact.html">קשר</a>
+            <a href="about.html">אודות</a>
+            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+          </div>
+
+          <script>
+            function myFunction() {
+              var x = document.getElementById("myTopnav");
+              if (x.className === "topnav") {
+                x.className += " responsive";
+              } else {
+                x.className = "topnav";
+              }
+            }
+            </script>
 
         <section class="hero">
             <h2 class="hero__h2">!ברוכים הבאים</h2>
@@ -47,14 +75,14 @@
         </section>
 
         <main>
-            <br>
+<!--            <br>
             <p id="test">test 1</p>
             <br>
             <button type="button" onclick="updateTextElement()">עדכן מסך</button>
             <br>
             <button type="button" onclick="updateListElement(4)">עדכן רשימה</button>
             <br>
-
+        -->
             <article>
                 <br>
                 <h2>חיפוש מתכונים</h2>
